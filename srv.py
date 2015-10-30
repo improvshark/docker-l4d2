@@ -24,7 +24,7 @@ def launch ():
 	print 'begin launch'
 	cmd("docker run  --name %s  -d -p %d:%d/udp -p %d:%d/tcp %s/%s" % (name, containerPort, hostPort, containerPort, hostPort,namespace,name) )
 def stop ():
-	print 'stoping %s'%name
+	print 'murdering %s container'%name
 	cmd("docker stop %s"%name)
 def start ():
 	print 'starting %s'%name
